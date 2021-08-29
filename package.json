@@ -1,0 +1,23 @@
+{
+  "name": "workout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "bash start.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/demna/workout.git"
+  },
+  "author": "Николай",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/demna/workout/issues"
+  },
+  "homepage": "https://github.com/demna/workout#readme",
+  "devDependencies": {
+    "typescript": "~4.3.5"
+  }
+}
