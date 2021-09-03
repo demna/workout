@@ -10,5 +10,13 @@ export class MathRing {
         public readonly module: number,
     ) { }
 
-
+    public getDeduction(n: number) {
+        while (n < 0) {
+            n += this.module;
+        }
+        while (n >= this.module) {
+            n -= this.module;
+        }
+        return n;
+    }
 }
