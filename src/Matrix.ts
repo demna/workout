@@ -18,13 +18,22 @@ export class Matrix<T> {
         return new Matrix(matrix);
     }
 
-    map<F>(f: (c: Coordinate, value: T, matrix: Matrix<T>) => F): Matrix<F> {
+    map<F>(f: (value: T, coordinate: Coordinate,  matrix: Matrix<T>) => F): Matrix<F> {
         const matrix: F[][] = ArrayGenerator.Z(this.N).map(() => []);
         for (let i = 0; i < this.N; i++) {
             for (let j = 0; j < this.M; j++) {
-                matrix[i][j] = f({ x: i, y: j }, this.matrix[i][j], this);
+                matrix[i][j] = f(this.matrix[i][j], { x: i, y: j }, this);
             }
         }
         return new Matrix(matrix);
+    }
+
+    forEach(f: (value: T, c: Coordinate, matrix: Matrix<T>) => void): Matrix<T> {
+        this.map((v, c, m) => {
+            const value = v;
+            f(v, c, m);
+            return value;
+        })
+        return this;
     }
 }
