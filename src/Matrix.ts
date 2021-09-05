@@ -1,5 +1,5 @@
-import { ArrayGenerator } from "ArrayGenerator";
-import { Coordinate } from "types/Coordinate";
+import { ArrayGenerator } from "./ArrayGenerator";
+import { Coordinate } from "./types/Coordinate";
 
 export class Matrix<T> {
 
