@@ -12,6 +12,12 @@ export class Matrix<T> {
         this.M = Math.min(...matrix.map(row => row.length));
     }
 
+    static Z(n: number, m: number): Matrix<number> {
+        const matrix = ArrayGenerator.Z(n)
+            .map(() => ArrayGenerator.Z(m));
+        return new Matrix(matrix);
+    }
+
     map<F>(f: (c: Coordinate, value: T, matrix: Matrix<T>) => F): Matrix<F> {
         const matrix: F[][] = ArrayGenerator.Z(this.N).map(() => []);
         for (let i = 0; i < this.N; i++) {
