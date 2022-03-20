@@ -1,7 +1,7 @@
 {
     "compileOnSave": false,
     "compilerOptions": {
-      "outDir": "./dist/out-tsc",
+      "outDir": "./public/",
       "forceConsistentCasingInFileNames": true,
       "strict": true,
       "noImplicitReturns": true,
@@ -12,10 +12,10 @@
       "experimentalDecorators": true,
       "moduleResolution": "node",
       "importHelpers": true,
-      "target": "es2017",
-      "module": "commonjs",
+      "target": "es5",
+      "module": "es6",
       "lib": [
-        "es2018",
+        "ES2018",
         "dom"
       ]
     },
